@@ -56,12 +56,6 @@ public interface GenTreeNodeInterface<T> {
 	public GenTreeNodeInterface<T>  [] getChildren(); 
 	
 	/**
-	 * get a iterator for the children of the node
-	 * @return child iterator starting at left most child 
-	 */
-	//public Iterator<GenTreeNodeInterface<T>> getIterable();
-	
-	/**
 	 * returns the node with given value if it is somewhere below this node
 	 * returns null if node is not in tree below this one
 	 * @param value value of node to get
@@ -83,19 +77,6 @@ public interface GenTreeNodeInterface<T> {
 	 */
 	public boolean hasChild(T value); 
 	
-	/**
-	 * return true if node is element or element is anywhere below it
-	 * @param element node to look for
-	 * @return true if element is in the tree below this node
-	 */
-	//public boolean hasElement(GenTreeNodeInterface<T> element); 
-	
-	/**
-	 * return true if node contains value or if any node below it contains the value 
-	 * @param element value to look for
-	 * @return true if element is found anywhere in the tree below this node
-	 */
-	//public boolean hasElement(T element); 
 	
 	/**
 	 * Add a node to this on as a child

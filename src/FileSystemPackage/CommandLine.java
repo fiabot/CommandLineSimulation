@@ -237,7 +237,12 @@ public class CommandLine {
 		 * @param cl command line 
 		 */
 		public void execute (String command,CommandLine cl) {
-			cl.setSelectedFolder(cl.getSelectedFolder().getParent());
+			if(cl.getSelectedFolder().getParent() == null) {
+				System.out.println("Parent Does not Exist"); 
+			}else {
+				cl.setSelectedFolder(cl.getSelectedFolder().getParent());
+			}
+			
 		}
 		
 		/**
@@ -488,6 +493,8 @@ public class CommandLine {
 					display(file); 
 				}else if (com.equals("clear")) {
 					clear(file); 
+				}else {
+					System.out.println("COMMAND NOT FOUND"); 
 				}
 			}
 		}
